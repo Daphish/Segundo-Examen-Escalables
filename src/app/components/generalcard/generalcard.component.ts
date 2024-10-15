@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-generalcard',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterModule],
   templateUrl: './generalcard.component.html',
   styleUrl: './generalcard.component.css'
 })
