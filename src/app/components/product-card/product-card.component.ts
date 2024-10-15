@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsServicesService } from '../../services/products-services.service';
 import { Product } from '../../interfaces/product.interface';
@@ -20,11 +20,7 @@ export class ProductCardComponent {
 
   constructor(private route: ActivatedRoute) {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-  }
-
-  ngOnInit(): void {
     this.product = this.productsService.products.find(product => product.id === this.id);
   }
-
 
 }
